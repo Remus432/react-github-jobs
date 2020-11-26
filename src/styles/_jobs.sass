@@ -1,0 +1,60 @@
+.jobs
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-gap: 4rem
+  width: 1150px
+  margin: 12rem auto
+
+.jobs__item
+  background: #fff
+  border-radius: 5px
+  box-shadow: 0 3px 10px rgba($primary, 0.1)
+  cursor: pointer
+  color: $neutral
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  height: 220px
+  position: relative
+  padding: 2.5rem
+
+  &-logo
+    width: 35px
+    position: absolute
+    top: -15px
+    border-radius: 10px
+  
+  &-title
+    font-weight: bold
+    color: $dark
+    margin: 1rem 0
+
+  &-company
+    font-weight: 300
+    margin-top: -1.5rem
+
+  &-location
+    color: $primary
+    font-size: 1.5rem
+    font-weight: bold
+    margin-top: 1rem
+    width: 55%
+
+  &-type 
+    margin-left: 1.5rem
+    position: relative
+
+    &::before
+      content: ""
+      position: absolute
+      top: 50%
+      left: -10px
+      transform: translateY(-50%)
+      width: 5px
+      height: 5px
+      background: $neutral
+      border-radius: 50%
+
+  &-info 
+    & span
+      font-size: 1.2rem 

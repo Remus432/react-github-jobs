@@ -1,0 +1,61 @@
+.post 
+  display: flex
+  flex-direction: column
+  
+  width: 700px
+  margin: auto
+
+  &__company
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    background: #fff
+    border-radius: 6px
+    transform: translateY(-50px)
+
+    &-logo
+      flex: 2
+      
+      & img
+        width: 100%
+
+    &-contact
+      display: flex
+      justify-content: space-around
+      align-items: center
+      flex: 5
+      padding: 4rem
+
+    &-info
+      display: flex
+      flex-direction: column
+
+    &-name
+      font-weight: bold
+      font-size: 3rem
+      margin-bottom: .5rem
+
+    &-site
+      color: $neutral
+
+  &__description
+    background: #fff
+    border-radius: 6px
+
+    &-info-wrapper
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 4rem
+
+    &-text
+      line-height: 3rem
+      padding: 0rem 4rem 4rem 4rem
+  
+  &__apply
+    background: $pattern
+    border-radius: 6px
+    padding: 4rem
+    color: #fff
+    margin: 4rem 0

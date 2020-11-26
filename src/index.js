@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Provider } from "react-redux"
+import store from "./store/store"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import App from './App'
+import FullJob from "./components/FullJob"
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <Router>
+        <div className="app">
+          <Switch>
+            <Route path="/" exact component={App} />
+            <Route path="/job/:id" component={FullJob}/>
+          </Switch>
+        </div> 
+      </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,112 @@
+.header
+  background-color: $primary
+  border-bottom-left-radius: 10rem
+  display: flex
+  justify-content: space-between  
+  padding: 4rem 20rem
+  padding-bottom: 8rem
+  position: relative
+
+  &__logo
+    color: #fff
+
+  &__theme
+    color: #fff
+    display: flex
+    align-items: center
+    
+    &-toggle
+      width: 40px
+      height: 20px
+      margin: 0 1rem
+      background: #fff
+      border-radius: 10px
+      cursor: pointer
+      position: relative
+
+      & .circle
+        width: 15px
+        height: 15px
+        position: absolute
+        background: $primary
+        border-radius: 50%
+        top: 50%
+        left: 0
+        transform: translate(5px, -50%)
+        transition: .5s all ease-in-out
+
+      & input
+        display: none
+
+  &__search
+    background-color: #fff
+    border-radius: 6px
+    box-shadow: 0 5px 10px rgba($pattern, 0.2)
+    display: flex
+    justify-content: space-between
+    width: 75%
+    position: absolute
+    padding: 0rem 4rem
+    left: 50%
+    bottom: -50%
+    transform: translate(-50%, -80%)
+
+    &-group
+      display: flex
+      align-items: center
+      padding: 1.5rem
+      justify-content: space-between
+
+      &-btn
+        width: 50%!important
+
+      &:nth-of-type(2)
+        border-right: 1px solid $neutral
+        border-left: 1px solid $neutral
+        padding: 0 1.5rem
+        flex: 3
+      
+      &:nth-of-type(1)
+        flex: 4
+
+      &:nth-of-type(3)
+        flex: 4
+        display: flex
+
+        & .header__search-group-fulltime
+          appearance: none
+          width: 10px
+          height: 10px
+          background-color: darken($bg, 5%)
+          position: relative
+          transition: .5s all ease-in-out
+
+          &::after
+            content: "\2713"
+            color: #fff
+            position: absolute
+            text-align: center
+            top: 0
+            left: .5rem
+            opacity: 0
+            transition: .5s all ease-in-out
+
+          &:checked::after
+            opacity: 1
+            
+          &:checked
+            background: $pattern
+
+      & input
+        border: none
+        padding: 1rem
+        width: 100%
+    
+
+      & i
+        color: $primary
+        margin-right: .5rem
+
+        
+.toggled-on
+  transform: translate(20px, -50%)!important
